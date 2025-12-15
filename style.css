@@ -1,0 +1,271 @@
+/* =====================
+   ROOT VARIABLES
+===================== */
+:root {
+    --bg: #05060a;
+    --card-bg: linear-gradient(160deg, #0d1020, #0a0d18);
+    --border: rgba(255, 255, 255, .08);
+
+    --blue: #00eaff;
+    --purple: #8a3dff;
+    --pink: #ff4fd8;
+
+    --text-main: #ffffff;
+    --text-soft: #a9b0ff;
+}
+
+/* =====================
+   BASE
+===================== */
+body {
+    background: radial-gradient(circle at top, #0c1025, #02030a);
+    color: var(--text-main);
+    font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont;
+    padding-top: 90px;
+    margin: 0;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+    background: linear-gradient(90deg, #050713, #0a0e24);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
+
+/* =====================
+   MAIN CONTENT
+===================== */
+.main-content {
+    padding: 40px 0 90px;
+}
+
+/* =====================
+   CARD
+===================== */
+.xheat-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .9);
+    transition: all .35s ease;
+    height: 100%;
+}
+
+.xheat-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 0 40px rgba(138, 61, 255, .5),
+        0 0 60px rgba(0, 234, 255, .25);
+}
+
+/* =====================
+   CARD HEADER
+===================== */
+.head {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    border-radius: 14px;
+    border: 2px solid rgba(255, 255, 255, .25);
+    object-fit: cover;
+}
+
+/* 🔥 FIXED CARD TITLE */
+.title {
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, var(--blue), var(--pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+/* Subtitle */
+.sub {
+    font-size: 12px;
+    color: var(--text-soft);
+}
+
+/* =====================
+   PRICE GRID
+===================== */
+.price-grid {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 8px 10px;
+}
+
+.day {
+    font-size: 13px;
+    color: #cfd6ff;
+    display: flex;
+    align-items: center;
+}
+
+.price-btn {
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all .3s ease;
+}
+
+.price-btn:hover {
+    background: rgba(0, 234, 255, .15);
+    border-color: var(--blue);
+    color: #ffffff;
+}
+
+/* =====================
+   BUY BUTTON
+===================== */
+.buy-btn {
+    display: block;
+    margin-top: 16px;
+    text-align: center;
+    padding: 11px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--purple), var(--pink));
+    color: #000;
+    font-weight: 900;
+    letter-spacing: .5px;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.buy-btn:hover {
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow:
+        0 0 25px rgba(138, 61, 255, .8),
+        0 0 40px rgba(255, 79, 216, .6);
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+    background: linear-gradient(90deg, #050713, #0a0e24);
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+}
+
+/* =====================
+   SOCIAL ICONS – ORIGINAL BRAND STYLE
+===================== */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.social {
+    text-decoration: none;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #fff;
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .12);
+    transition: all .35s ease;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+/* TELEGRAM */
+.social.tg {
+    color: #2AABEE;
+}
+
+.social.tg:hover {
+    background: #2AABEE;
+    color: #fff;
+    box-shadow: 0 0 25px rgba(42, 171, 238, .9);
+    transform: translateY(-4px);
+}
+
+/* WHATSAPP */
+.social.wa {
+    color: #25D366;
+}
+
+.social.wa:hover {
+    background: #25D366;
+    color: #fff;
+    box-shadow: 0 0 25px rgba(37, 211, 102, .9);
+    transform: translateY(-4px);
+}
+
+/* DISCORD */
+.social.dc {
+    color: #5865F2;
+}
+
+.social.dc:hover {
+    background: #5865F2;
+    color: #fff;
+    box-shadow: 0 0 25px rgba(88, 101, 242, .9);
+    transform: translateY(-4px);
+}
+
+/* YOUTUBE */
+.social.yt {
+    color: #FF0000;
+}
+
+.social.yt:hover {
+    background: #FF0000;
+    color: #fff;
+    box-shadow: 0 0 30px rgba(255, 0, 0, .9);
+    transform: translateY(-4px);
+}
+
+
+/* =====================
+   NAVBAR CONTACT BUTTON
+===================== */
+.nav-contact-btn {
+    padding: 8px 18px !important;
+    border-radius: 999px;
+    font-weight: 800;
+    letter-spacing: .4px;
+    color: #000 !important;
+    background: linear-gradient(135deg, #25D366, #00eaff);
+    box-shadow:
+        0 0 15px rgba(37, 211, 102, .6),
+        0 0 30px rgba(0, 234, 255, .4);
+    transition: all .35s ease;
+    display: flex;
+    align-items: center;
+}
+
+.nav-contact-btn:hover {
+    color: #fff !important;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow:
+        0 0 25px rgba(37, 211, 102, .9),
+        0 0 45px rgba(0, 234, 255, .8);
+}
+
+.nav-contact-btn::after {
+    display: none !important;
+}
