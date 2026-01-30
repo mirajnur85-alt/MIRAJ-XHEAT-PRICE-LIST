@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 75%;
+  }
+
+  body {
+    background-color: #030407;
+    background-image:
+      radial-gradient(circle at 15% 50%, rgba(189, 0, 255, 0.08) 0%, transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(0, 240, 255, 0.08) 0%, transparent 25%);
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: "Outfit", "Inter", "Segoe UI", sans-serif;
+    padding-top: 80px;
+    margin: 0;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Responsive padding for different screen sizes */
+  @media (min-width: 640px) {
+    body {
+      padding-top: 90px;
+    }
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar - Premium Sleek */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  @media (max-width: 640px) {
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #030407;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1a1d2d;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2a2d3d;
+  }
+
+  /* Selection */
+  ::selection {
+    background: rgba(189, 0, 255, 0.3);
+    color: white;
+  }
+
+  ::-moz-selection {
+    background: rgba(189, 0, 255, 0.3);
+    color: white;
+  }
+
+  /* Container responsive max-widths */
+  .container {
+    @apply mx-auto px-4;
+    max-width: 1400px;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      @apply px-6;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      @apply px-8;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      @apply px-12;
+    }
+  }
+
+  /* TV and large displays */
+  @media (min-width: 1920px) {
+    .container {
+      max-width: 1600px;
+    }
+  }
+}
+
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .glass-panel {
+    @apply bg-cyber-glass backdrop-blur-xl border border-cyber-border;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-neon-blue to-neon-purple;
+  }
+
+
+  @keyframes pulse {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 3s infinite;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes glow {
+
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(0, 234, 255, 0.5);
+    }
+
+    50% {
+      box-shadow: 0 0 40px rgba(0, 234, 255, 0.8), 0 0 60px rgba(138, 61, 255, 0.6);
+    }
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  /* Responsive text sizes */
+  .text-responsive-xl {
+    @apply text-3xl;
+  }
+
+  @media (min-width: 640px) {
+    .text-responsive-xl {
+      @apply text-4xl;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .text-responsive-xl {
+      @apply text-5xl;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .text-responsive-xl {
+      @apply text-6xl;
+    }
+  }
+}
+
+/* Google Translate Widget - Make it smaller */
+#google_translate_element {
+  transform: scale(0.75) !important;
+  transform-origin: bottom right !important;
+}
+
+#google_translate_element * {
+  font-size: 11px !important;
+}
+
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+.goog-te-menu-value {
+  font-size: 11px !important;
+  padding: 4px 8px !important;
+}
+
+.goog-te-menu-frame {
+  max-width: 180px !important;
+  font-size: 11px !important;
+}
+
+body .goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
